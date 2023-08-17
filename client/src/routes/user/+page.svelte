@@ -1,11 +1,11 @@
 <script lang="ts">
+  import { onMount } from "svelte";
+
   export let data;
-  let allUser= [];
-  $: allUser = data.data.allUser;
 </script>
 
 <section>
-  {#each allUser as user}
+  {#each data.data.allUser as user}
     <div class="user">
       <h1>{user.id}</h1>
       <h1>{user.name}</h1>

@@ -5,7 +5,7 @@ import { randomInt } from 'crypto';
 let listOfUser: UserType[] = [];
 listOfUser = [
   { id: 1, name: 'John', email: 'John@gmail.com', password: '123456' },
-  { id: 2, name: 'DUc', email: 'duc@gmail.com', password: '123456'}
+  { id: 2, name: 'DUc', email: 'duc@gmail.com', password: '123456' },
 ];
 @Resolver((of) => UserType)
 export class UserResolver {
@@ -15,7 +15,7 @@ export class UserResolver {
   }
   @Mutation((returns) => UserType)
   insertUser(@Args('name') name: string) {
-    let id = randomInt(10000);
+    let id = randomInt(1000000000);
     const user: UserType = {
       id: id,
       name,
